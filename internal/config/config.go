@@ -11,7 +11,8 @@ type Config struct {
 	REDIS_URL    string
 }
 
-func load() *Config {
+// * if you want to export a function, just capitalize it.
+func Load() *Config {
 	cfg := &Config{
 		PORT:         getEnv("PORT", "3000"),
 		DATABASE_URL: getEnv("DATABASE_URL", ""),
